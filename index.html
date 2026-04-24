@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mauli Agro Chemicals</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0f766e"/>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo-box">
+      <div class="logo-placeholder">LOGO</div>
+      <div>
+        <h1 id="shopTitle">Mauli Agro Chemicals</h1>
+        <p id="shopTagline">Pesticides | Fertilizer | Seeds (Grapes Specialist)</p>
+      </div>
+    </div>
+
+    <div class="top-actions">
+      <button class="btn" onclick="toggleLanguage()">🌐 Marathi / English</button>
+      <a class="btn admin-btn" href="admin.html">🔐 Admin</a>
+    </div>
+  </header>
+
+  <section class="shop-info">
+    <h2 id="shopInfoTitle">Shop Information</h2>
+
+    <p><b id="addressLabel">Address:</b>
+      <span id="shopAddress">Near Main Market, Sangli, Maharashtra</span>
+    </p>
+
+    <p>
+      <b id="phoneLabel">Phone:</b>
+      <a href="tel:8149693191">8149693191</a>
+    </p>
+
+    <p class="map-links">
+      <a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mauli+Agro+Chemicals+Sangli">
+        📍 Open Google Map
+      </a>
+
+      <a class="btn" target="_blank" href="https://wa.me/918149693191">
+        💬 WhatsApp
+      </a>
+
+      <a class="btn" href="tel:8149693191">
+        📞 Call
+      </a>
+    </p>
+  </section>
+
+  <section class="container">
+    <h2 id="productsTitle">Products</h2>
+
+    <input type="text" id="searchInput" placeholder="Search product..." onkeyup="searchProducts()" />
+
+    <div class="category-bar">
+      <button class="cat-btn" onclick="filterCategory('all')" id="catAll">All</button>
+      <button class="cat-btn" onclick="filterCategory('pesticides')" id="catPesticides">Pesticides</button>
+      <button class="cat-btn" onclick="filterCategory('fertilizer')" id="catFertilizer">Fertilizer</button>
+      <button class="cat-btn" onclick="filterCategory('seeds')" id="catSeeds">Seeds</button>
+      <button class="cat-btn grapes-btn" onclick="filterCategory('grapes')" id="catGrapes">🍇 Grapes Special</button>
+    </div>
+
+    <div id="productList" class="product-grid"></div>
+  </section>
+
+  <section class="container cart-section">
+    <h2 id="cartTitle">Cart</h2>
+    <div id="cartItems"></div>
+
+    <h3 id="totalLabel">Total: ₹ <span id="cartTotal">0</span></h3>
+
+    <div class="checkout-box">
+      <input type="text" id="custName" placeholder="Your Name" />
+      <input type="text" id="custMobile" placeholder="Mobile Number" />
+      <textarea id="custAddress" placeholder="Delivery Address"></textarea>
+
+      <button class="btn checkout-btn" onclick="placeOrder()">
+        ✅ Place Order
+      </button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Mauli Agro Chemicals | PWA App</p>
+    <p class="small" id="disclaimer">
+      Disclaimer: Use pesticides strictly as per label instructions. Consult expert if required.
+    </p>
+  </footer>
+
+<script src="app.js"></script>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+  }
+</script>
+
+</body>
+</html>
