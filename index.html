@@ -101,6 +101,21 @@
     navigator.serviceWorker.register("service-worker.js");
   }
 </script>
+<!-- Bottom Navigation -->
+<div class="bottom-nav">
+  <button onclick="scrollToSection('productsTitle')">🏠 Home</button>
+  <button onclick="scrollToSection('cartTitle')">🛒 Cart</button>
+  <button onclick="openOrdersPopup()">📦 Orders</button>
+  <a href="admin.html">🔐 Admin</a>
+</div>
 
+<!-- Orders Popup -->
+<div id="ordersPopup" class="popup">
+  <div class="popup-content">
+    <h3>📦 Your Orders</h3>
+    <div id="customerOrders"></div>
+    <button class="btn danger-btn" onclick="closeOrdersPopup()">Close</button>
+  </div>
+</div>
 </body>
 </html>
