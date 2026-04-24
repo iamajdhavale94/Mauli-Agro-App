@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0fdfa;
+  color: #111827;
+}
+
+.header {
+  background: #0f766e;
+  color: white;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-box {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.logo-placeholder {
+  width: 55px;
+  height: 55px;
+  background: white;
+  color: #0f766e;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.top-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.container {
+  padding: 15px;
+}
+
+.shop-info {
+  background: white;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.btn {
+  background: #0f766e;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.admin-btn {
+  background: #1d4ed8;
+}
+
+.danger-btn {
+  background: #dc2626;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+textarea {
+  height: 80px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.product-card {
+  background: white;
+  padding: 12px;
+  border-radius: 14px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.product-card h3 {
+  margin: 5px 0;
+}
+
+.product-card p {
+  margin: 4px 0;
+  font-size: 13px;
+}
+
+.product-card .price {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 6px;
+}
+
+.category-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.cat-btn {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #e5e7eb;
+}
+
+.grapes-btn {
+  background: #7c3aed;
+  color: white;
+}
+
+.cart-section {
+  background: white;
+  margin: 15px;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.cart-item {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-btn {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+.footer {
+  background: #0f766e;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.small {
+  font-size: 12px;
+  opacity: 0.8;
+}
