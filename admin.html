@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin - Mauli Agro Chemicals</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0f766e"/>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo-box">
+    <div class="logo-placeholder">LOGO</div>
+    <div>
+      <h1>Admin Panel</h1>
+      <p>Mauli Agro Chemicals</p>
+    </div>
+  </div>
+
+  <div class="top-actions">
+    <a class="btn" href="index.html">🏠 Home</a>
+  </div>
+</header>
+
+<section class="container">
+  <h2>🔐 Admin Login</h2>
+
+  <div id="loginBox">
+    <input type="password" id="adminPin" placeholder="Enter Admin PIN" />
+    <button class="btn" onclick="adminLogin()">Login</button>
+    <p class="small">Default PIN set by owner.</p>
+  </div>
+
+  <div id="adminPanel" style="display:none;">
+    <h2>📦 Manage Products</h2>
+
+    <div class="admin-form">
+      <input type="text" id="prodName" placeholder="Product Name" />
+      <input type="text" id="prodCompany" placeholder="Company Name" />
+      <input type="text" id="prodPack" placeholder="Pack Size (e.g. 250ml / 1kg)" />
+      <input type="number" id="prodPrice" placeholder="Price ₹" />
+
+      <select id="prodCategory">
+        <option value="pesticides">Pesticides</option>
+        <option value="fertilizer">Fertilizer</option>
+        <option value="seeds">Seeds</option>
+        <option value="grapes">🍇 Grapes Special</option>
+      </select>
+
+      <textarea id="prodUsage" placeholder="Usage / Dosage / Crops"></textarea>
+
+      <button class="btn" onclick="addProduct()">➕ Add Product</button>
+    </div>
+
+    <h3>Product List</h3>
+    <div id="adminProductList"></div>
+
+    <hr>
+
+    <h2>📑 Orders</h2>
+    <div id="adminOrders"></div>
+
+    <button class="btn danger-btn" onclick="logoutAdmin()">Logout</button>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Mauli Agro Chemicals</p>
+</footer>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
