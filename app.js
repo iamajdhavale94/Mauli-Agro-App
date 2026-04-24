@@ -266,3 +266,45 @@ initDefaultProducts();
 applyLanguage();
 renderProducts();
 renderCart();
+
+function scrollToSection(id) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+function openOrdersPopup() {
+  const popup = document.getElementById("ordersPopup");
+  popup.style.display = "block";
+  renderCustomerOrders();
+}
+
+function closeOrdersPopup() {
+  document.getElementById("ordersPopup").style.display = "none";
+}
+
+function renderCustomerOrders() {
+  const box = document.getElementById("customerOrders");
+  if (!box) return;
+
+  if (orders.length === 0) {
+    box.innerHTML = "<p>No orders placed yet.</p>";
+    return;
+  }
+
+  let html = "";
+
+  orders.slice().reverse().forEach(o => {
+    html += `
+      <div class="product-card">
+        <h4>Order ID: ${o.orderId}</h4>
+        <p><b>Date:</b> ${o.dateTime}</p>
+        <p><b>Status:</b> ${o.status}</p>
+        <p><b>Total:</b> ₹${o.total}</p>
+      </div>
+    `;
+  });
+
+  box.innerHTML = html;
+}
